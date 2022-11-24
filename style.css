@@ -1,0 +1,33 @@
+html,
+body {
+  height: 100%;
+}
+body {
+  font-family: "Press Start 2P", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: lightpink;
+}
+.container {
+  display: flex;
+  background-color: aliceblue;
+  flex-direction: column;
+  width: 400px;
+  justify-content: flex-start;
+  align-items: flex-start;
+  color: black;
+  padding: 24px;
+}
+.adding {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+input {
+  width: 350px;
+}
+.listing {
+  display: flex;
+  margin-top: 12px;
+}
