@@ -5,22 +5,42 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <title>To do List</title>
+    <title>Rock Paper Scissors</title>
   </head>
   <body>
-    <section class="container">
-      <div class="heading">
-        <h2>To do app</h2>
+    <header>
+      <nav>
+        <h1>Rock Paper Scissors</h1>
+      </nav>
+      <div class="row">
+        <div class="header-content">
+          <h2>Pick your weapon!</h2>
+          <p>First to score 5 points win the game</p>
+        </div>
+        <div class="game-group">
+          <div class="game-icon">
+            <img src="images/qm.png" class="p-questionmark" alt="" />
+          </div>
+          <div class="game-icon">
+            <img src="images/qm.png" class="pc-questionmark" alt="" />
+          </div>
+        </div>
+        <div class="modal hidden delay">
+          <p class="winner">The Winner is</p>
+          <button class="restart delay">Play Again</button>
+        </div>
+        <div class="overlay hidden delay"></div>
+        <div class="score">
+          <p class="playerScore">Player : 0</p>
+          <p class="pcScore">Computer : 0</p>
+        </div>
+        <div class="weapon">
+          <img src="images/rock.png" class="rock" alt="" />
+          <img src="images/paper.jpg" class="paper" alt="" />
+          <img src="images/scc.png" class="scissors" alt="" />
+        </div>
       </div>
-      <div class="adding">
-        <input type="text" class="userinput" />
-        <button>Add</button>
-      </div>
-      <div class="listing hidden">
-        <li>Yaheelo</li>
-        <button>Add</button>
-        <button>Add</button>
-      </div>
-    </section>
+    </header>
   </body>
+  <script src="script.js"></script>
 </html>
