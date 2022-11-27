@@ -1,7 +1,7 @@
 "use strict";
 
-const temp = "";
-const adding = document.querySelector(".adding");
+const userInput = document.getElementById("userinput").value;
+const adding = document.querySelector(".addButton");
 const containerId = document.getElementById("container");
 
 adding.addEventListener("click", function () {
@@ -17,15 +17,22 @@ function createNewList() {
 
   //Adding List
   const list = document.createElement("li");
-  const insideList = document.createTextNode("List example");
+  const insideList = document.createTextNode("userInput");
   list.appendChild(insideList);
   newDiv.appendChild(list);
-  /*
-  const 1 = document.createElement("li");
-  const 2 = document.createTextNode("What to do.");
-  1.appendChild(2);
 
-  
-  element.appendChild(para);
-  */
+  //Edit button
+  const newButtonDiv = document.createElement("div");
+  const editButton = document.createElement("button");
+  const insideEditButton = document.createTextNode("Edit");
+  newButtonDiv.className = "button-container";
+  newDiv.appendChild(newButtonDiv);
+  newButtonDiv.appendChild(editButton);
+  editButton.appendChild(insideEditButton);
+
+  //Remove button
+  const removeButton = document.createElement("button");
+  const insideRemoveButton = document.createTextNode("Remove");
+  newButtonDiv.appendChild(removeButton);
+  removeButton.appendChild(insideRemoveButton);
 }
