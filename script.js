@@ -25,6 +25,7 @@ function createNewList() {
   let list = document.createElement("li");
   const insideList = document.createTextNode(`${userInput}`);
   list.id = "listDiv";
+  list.className = "preColor";
   list.appendChild(insideList);
   newListDiv.appendChild(list);
   newDiv.appendChild(newListDiv);
@@ -52,14 +53,12 @@ function createNewList() {
   editButton.addEventListener("click", function () {
     if (editButton.textContent === "Edit") {
       editButton.textContent = "Done";
+      list.setAttribute("class", "colorChange");
       list.setAttribute("contenteditable", "true");
-      justCheck = true;
-      console.log("justCheck is " + justCheck);
     } else if (editButton.textContent === "Done") {
       editButton.textContent = "Edit";
+      list.setAttribute("class", "preColor");
       list.setAttribute("contenteditable", "false");
-      justCheck = false;
-      console.log("justCheck now is " + justCheck);
     } else {
       console.log("something wrong");
     }

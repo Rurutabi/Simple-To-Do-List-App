@@ -82,3 +82,11 @@ input {
   word-wrap: break-word;
   inline-size: 250px;
 }
+
+.preColor {
+  background-color: white;
+}
+
+.colorChange {
+  background-color: yellow;
+}
