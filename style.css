@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nerko+One&display=swap");
 
 html,
 body {
@@ -19,24 +19,21 @@ p {
   margin: 1.2rem 0;
 }
 
-h1 {
-  font-weight: 800;
-  font-size: 1.8rem;
-}
-
 h2 {
   font-weight: 800;
-  font-size: 1.2rem;
+  font-size: 2.4rem;
+  color: #800080;
 }
 
 p,
 li {
   font-weight: 400;
-  font-size: 0.8rem;
+  font-size: 1.4rem;
+  color: #800080;
 }
 
 body {
-  font-family: "Press Start 2P", sans-serif;
+  font-family: "Nerko One", cursive;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -48,10 +45,7 @@ body {
   background-color: aliceblue;
   flex-direction: column;
   width: 400px;
-  justify-content: flex-start;
-  align-items: flex-start;
-  color: black;
-  padding: 24px;
+  padding: 36px;
 }
 
 .adding {
@@ -59,12 +53,44 @@ body {
   gap: 54px;
 }
 
+.addButton {
+  background-color: #800080;
+  border: none;
+  color: white;
+  padding: 12px;
+  border-radius: 8px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.editButton {
+  background-color: #4caf50;
+  border: none;
+  color: white;
+  padding: 12px;
+  border-radius: 8px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.removeButton {
+  background-color: #ff6f61;
+  border: none;
+  color: white;
+  padding: 12px;
+  border-radius: 8px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+}
+
 input {
   width: 300px;
 }
 
-/*Button*/
-.listing {
+.listing-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -78,15 +104,20 @@ input {
   gap: 12px;
 }
 
-.list-name {
+.userlist {
   word-wrap: break-word;
-  inline-size: 250px;
-}
-
-.preColor {
-  background-color: white;
+  inline-size: 220px;
 }
 
 .colorChange {
   background-color: yellow;
+  color: black;
+}
+.preColor {
+  background-color: aliceblue;
+}
+
+/*Hidden*/
+.hidden {
+  display: none;
 }

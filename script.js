@@ -1,31 +1,43 @@
 "use strict";
 
 const adding = document.querySelector(".addButton");
-const containerId = document.getElementById("container");
-let justCheck = false;
-let listNumber = 0;
+const containerDiv = document.getElementById("container");
+const headingDiv = document.getElementById("heading");
+const hidden = document.querySelector(".hidden");
+const enter = document.getElementById("userinput");
 
 adding.addEventListener("click", function () {
-  createNewList();
-  //Remove value after added to the list
-  document.getElementById("userinput").value = "";
+  if (document.getElementById("userinput").value === "") {
+    hidden.classList.remove("hidden");
+  } else {
+    createNewList();
+    //Remove value after added to the list
+    hidden.classList.add("hidden");
+    document.getElementById("userinput").value = "";
+  }
+});
+
+enter.addEventListener("keypress", function (event) {
+  if (event.key === "Enter") {
+    adding.click();
+  }
 });
 
 function createNewList() {
   //Adding Div
   const userInput = document.getElementById("userinput").value;
   const newDiv = document.createElement("div");
-  newDiv.className = `listing`;
-  containerId.appendChild(newDiv);
+
+  newDiv.classList.add(`listing-container`);
+  containerDiv.appendChild(newDiv);
 
   //Adding List
   const newListDiv = document.createElement("div");
-  newListDiv.className = "list-name";
-  newListDiv.id = "list-test";
   let list = document.createElement("li");
   const insideList = document.createTextNode(`${userInput}`);
-  list.id = "listDiv";
-  list.className = "preColor";
+
+  newListDiv.classList.add("userlist");
+  list.classList.add("preColor");
   list.appendChild(insideList);
   newListDiv.appendChild(list);
   newDiv.appendChild(newListDiv);
@@ -34,7 +46,9 @@ function createNewList() {
   const newButtonDiv = document.createElement("div");
   let editButton = document.createElement("button");
   let insideEditButton = document.createTextNode("Edit");
-  newButtonDiv.className = "button-container";
+
+  newButtonDiv.classList.add("button-container");
+  editButton.classList.add("editButton");
   newDiv.appendChild(newButtonDiv);
   newButtonDiv.appendChild(editButton);
   editButton.appendChild(insideEditButton);
@@ -42,6 +56,8 @@ function createNewList() {
   //Remove button
   const removeButton = document.createElement("button");
   const insideRemoveButton = document.createTextNode("Remove");
+
+  removeButton.classList.add("removeButton");
   newButtonDiv.appendChild(removeButton);
   removeButton.appendChild(insideRemoveButton);
 
@@ -53,11 +69,13 @@ function createNewList() {
   editButton.addEventListener("click", function () {
     if (editButton.textContent === "Edit") {
       editButton.textContent = "Done";
-      list.setAttribute("class", "colorChange");
+      list.classList.remove("preColor");
+      list.classList.add("colorChange");
       list.setAttribute("contenteditable", "true");
     } else if (editButton.textContent === "Done") {
       editButton.textContent = "Edit";
-      list.setAttribute("class", "preColor");
+      list.classList.remove("colorChange");
+      list.classList.add("preColor");
       list.setAttribute("contenteditable", "false");
     } else {
       console.log("something wrong");
