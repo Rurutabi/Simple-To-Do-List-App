@@ -1,84 +1,46 @@
 "use strict";
+const before = document.querySelector(".before-calculate");
+const after = document.querySelector(".after-calculate");
 
-const adding = document.querySelector(".addButton");
-const containerDiv = document.getElementById("container");
-const headingDiv = document.getElementById("heading");
-const hidden = document.querySelector(".hidden");
-const enter = document.getElementById("userinput");
+const input = 0;
+const input2 = 2;
 
-adding.addEventListener("click", function () {
-  if (document.getElementById("userinput").value === "") {
-    hidden.classList.remove("hidden");
-  } else {
-    createNewList();
-    //Remove value after added to the list
-    hidden.classList.add("hidden");
-    document.getElementById("userinput").value = "";
-  }
+//Button
+const zeroButton = document.querySelector(".zero");
+const oneButton = document.querySelector(".one");
+const twoButton = document.querySelector(".two");
+const threeButton = document.querySelector(".three");
+const fourButton = document.querySelector(".four");
+const fiveButton = document.querySelector(".five");
+const sixButton = document.querySelector(".six");
+const sevenButton = document.querySelector(".seven");
+const eightButton = document.querySelector(".eight");
+const nineButton = document.querySelector(".nine");
+const plusButton = document.querySelector(".plus");
+const minusButton = document.querySelector(".minus");
+const mutiplyButton = document.querySelector(".mutiply");
+const divideButton = document.querySelector(".divide");
+const decimalButton = document.querySelector(".decimal");
+const clearButton = document.querySelector(".clear");
+const deleteButton = document.querySelector(".delete");
+const equalButton = document.querySelector(".equal");
+
+oneButton.addEventListener("click", function () {
+  before.textContent = 1;
 });
 
-enter.addEventListener("keypress", function (event) {
-  if (event.key === "Enter") {
-    adding.click();
-  }
+twoButton.addEventListener("click", function () {
+  return 2;
 });
 
-function createNewList() {
-  //Adding Div
-  const userInput = document.getElementById("userinput").value;
-  const newDiv = document.createElement("div");
+threeButton.addEventListener("click", function () {
+  return 3;
+});
 
-  newDiv.classList.add(`listing-container`);
-  containerDiv.appendChild(newDiv);
+plusButton.addEventListener("click", function () {
+  return "+";
+});
 
-  //Adding List
-  const newListDiv = document.createElement("div");
-  let list = document.createElement("li");
-  const insideList = document.createTextNode(`${userInput}`);
-
-  newListDiv.classList.add("userlist");
-  list.classList.add("preColor");
-  list.appendChild(insideList);
-  newListDiv.appendChild(list);
-  newDiv.appendChild(newListDiv);
-
-  //Edit button
-  const newButtonDiv = document.createElement("div");
-  let editButton = document.createElement("button");
-  let insideEditButton = document.createTextNode("Edit");
-
-  newButtonDiv.classList.add("button-container");
-  editButton.classList.add("editButton");
-  newDiv.appendChild(newButtonDiv);
-  newButtonDiv.appendChild(editButton);
-  editButton.appendChild(insideEditButton);
-
-  //Remove button
-  const removeButton = document.createElement("button");
-  const insideRemoveButton = document.createTextNode("Remove");
-
-  removeButton.classList.add("removeButton");
-  newButtonDiv.appendChild(removeButton);
-  removeButton.appendChild(insideRemoveButton);
-
-  //Remove div when click
-  removeButton.addEventListener("click", function () {
-    newDiv.remove();
-  });
-
-  editButton.addEventListener("click", function () {
-    if (editButton.textContent === "Edit") {
-      editButton.textContent = "Done";
-      list.classList.remove("preColor");
-      list.classList.add("colorChange");
-      list.setAttribute("contenteditable", "true");
-    } else if (editButton.textContent === "Done") {
-      editButton.textContent = "Edit";
-      list.classList.remove("colorChange");
-      list.classList.add("preColor");
-      list.setAttribute("contenteditable", "false");
-    } else {
-      console.log("something wrong");
-    }
-  });
+function calculateResult() {
+  return `${input}${symbol}${input2}`;
 }
