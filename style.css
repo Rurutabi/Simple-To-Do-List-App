@@ -1,76 +1,123 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap");
-/* Base Styling */
+@import url("https://fonts.googleapis.com/css2?family=Nerko+One&display=swap");
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-size: 62.5%;
+html,
+body {
+  height: 100%;
 }
 
-body {
-  display: flex;
-  font-family: "Poppins", sans-serif;
-  height: 100vh;
+a {
+  text-decoration: none;
+  font-weight: 400;
+  /* 1.6*10 = 16px */
+  font-size: 1.6rem;
   color: black;
 }
 
+h1,
+h2,
 p {
-  font-size: 1.6rem;
+  margin: 1.2rem 0;
 }
 
-.before-calculate {
-  font-size: 3.6rem;
+h2 {
+  font-weight: 800;
+  font-size: 2.4rem;
+  color: #800080;
 }
-.container {
+
+p,
+li {
+  font-weight: 400;
+  font-size: 1.4rem;
+  color: #800080;
+}
+
+body {
+  font-family: "Nerko One", cursive;
   display: flex;
-  width: 80%;
   align-items: center;
   justify-content: center;
-  margin: auto;
-  background-color: #001f3f;
-  border-style: solid;
-  flex-direction: column;
-  width: 300px;
-  padding: 12px;
-  border-radius: 15px;
+  background-color: lightpink;
 }
 
-.first-row {
-  flex-direction: column;
-  align-items: flex-end;
-  padding: 1.6rem;
-  background-color: #aaaaaa;
-  border-style: solid;
-  height: 100px;
-}
-
-.row {
+.container {
   display: flex;
+  background-color: aliceblue;
+  flex-direction: column;
+  width: 400px;
+  padding: 36px;
+}
+
+.adding {
+  display: flex;
+  gap: 54px;
+}
+
+.addButton {
+  background-color: #800080;
+  border: none;
+  color: white;
+  padding: 12px;
   border-radius: 8px;
-  margin-top: 4px;
-  width: 260px;
-  justify-content: center;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
 }
 
-.second-row {
-  gap: 16px;
+.editButton {
+  background-color: #4caf50;
+  border: none;
+  color: white;
+  padding: 12px;
+  border-radius: 8px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
 }
 
-.red,
-.green {
-  border-style: solid;
-  padding: 1.4rem;
-}
-
-.red {
+.removeButton {
   background-color: #ff6f61;
+  border: none;
+  color: white;
+  padding: 12px;
+  border-radius: 8px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
 }
 
-.green {
-  background-color: #009b77;
+input {
+  width: 300px;
 }
 
-.normal-row {
-  gap: 4px;
+.listing-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 24px;
+  width: 400px;
+  list-style-type: none;
+}
+
+.button-container {
+  display: flex;
+  gap: 12px;
+}
+
+.userlist {
+  word-wrap: break-word;
+  inline-size: 220px;
+}
+
+.colorChange {
+  background-color: yellow;
+  color: black;
+}
+.preColor {
+  background-color: aliceblue;
+}
+
+/*Hidden*/
+.hidden {
+  display: none;
 }

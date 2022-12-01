@@ -5,77 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <title>Simple Calculator</title>
+    <title>To do List</title>
   </head>
   <body>
     <section class="container" id="container">
-      <div class="first-row row">
-        <p class="after-calculate"></p>
-        <p class="before-calculate"></p>
+      <div class="heading" id="heading">
+        <h2>To do List</h2>
+        <p class="hidden">Please write something first</p>
       </div>
-      <div class="second-row row">
-        <div class="red row">
-          <p>CLEAR</p>
-        </div>
-        <div class="green row">
-          <p>DELETE</p>
-        </div>
-      </div>
-      <div class="normal-row row">
-        <div class="seven red row">
-          <p>7</p>
-        </div>
-        <div class="eight green row">
-          <p>8</p>
-        </div>
-        <div class="nine red row">
-          <p>9</p>
-        </div>
-        <div class="divide green row">
-          <p>÷</p>
-        </div>
-      </div>
-      <div class="normal-row row">
-        <div class="four green row">
-          <p>4</p>
-        </div>
-        <div class="five red row">
-          <p>5</p>
-        </div>
-        <div class="six green row">
-          <p>6</p>
-        </div>
-        <div class="mutiply red row">
-          <p>x</p>
-        </div>
-      </div>
-      <div class="normal-row row">
-        <div class="one red row">
-          <p>1</p>
-        </div>
-        <div class="two green row">
-          <p>2</p>
-        </div>
-        <div class="three red row">
-          <p>3</p>
-        </div>
-        <div class="minus green row">
-          <p>-</p>
-        </div>
-      </div>
-      <div class="normal-row row">
-        <div class="decimal green row">
-          <p>.</p>
-        </div>
-        <div class="zero red row">
-          <p>0</p>
-        </div>
-        <div class="equal green row">
-          <p>=</p>
-        </div>
-        <div class="plus red row">
-          <p>+</p>
-        </div>
+      <div class="adding">
+        <input type="text" placeholder="Type your list" id="userinput" />
+        <button class="addButton">Add</button>
       </div>
     </section>
   </body>
